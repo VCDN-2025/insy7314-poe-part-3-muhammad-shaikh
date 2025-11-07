@@ -154,7 +154,7 @@ Browse to that HTTPS URL – the React SPA will load and talk to the API on the 
 
 Note: EF Core Migrate() is called on startup, so the SQLite database schema is created/updated automatically.
 
-API Overview
+**API Overview**
 High-level endpoints (not all fields shown):
 
 Auth
@@ -191,7 +191,7 @@ Fields include amount, currency, payeeAccount, swiftBic, idempotencyKey.
 
 Uses idempotency key to avoid duplicate submissions.
 
-Employee Payments
+**Employee Payments**
 GET /api/employee/payments?status=PendingVerification|Verified|SubmittedToSwift
 
 Returns payments with status filter.
@@ -204,7 +204,7 @@ POST /api/employee/payments/{id}/submit
 
 Marks verified payment as submitted to SWIFT.
 
-Data Model
+**Data Model**
 User
 Key fields (simplified):
 
@@ -224,7 +224,7 @@ bool IsEmployee – differentiates staff from customers.
 
 Passwords are never stored in plain text; only PasswordHash is stored, created using ASP.NET Core’s PasswordHasher<User> (PBKDF2 + salt).
 
-Field Validation Rules
+**Field Validation Rules**
 Registration (Customer)
 Server-side (C# [RegularExpression] / [StringLength]) and Client-side (React RegEx) are aligned:
 
@@ -285,7 +285,7 @@ Prevents attackers from getting cleartext passwords even if DB is leaked.
 HttpOnly cookie prevents JavaScript reading the auth token (protects against XSS stealing session).
 
 
-Session Security & CSRF
+**Session Security & CSRF**
 Anti-Forgery (IAntiforgery) configured in Program.cs:
 
 HeaderName = "X-CSRF-TOKEN".
@@ -374,7 +374,7 @@ Online brute-force attempts on login.
 
 Abusive automation / accidental flood.
 
-Employee Portal & Static Login
+**Employee Portal & Static Login**
 Employees are pre-created in the database (seed or manual insert).
 
 User.IsEmployee = true marks staff accounts.
@@ -395,7 +395,7 @@ Password: Employee@123
 
 If these are changed in code/seed, update the README & demo accordingly.
 
-Employee functions:
+**Employee functions:**
 
 View all payments filtered by status.
 
@@ -405,7 +405,7 @@ Verify: sets IsVerified, Status = "Verified", VerifiedByEmployeeId, VerifiedAt.
 
 Submit to SWIFT: sets SubmittedToSwift, Status = "SubmittedToSwift", SubmittedAt.
 
-DevSecOps Pipeline (CircleCI)
+**DevSecOps Pipeline (CircleCI)**
 The repo contains a CircleCI config (.circleci/config.yml) that runs on pushes to GitHub.
 
 Jobs
@@ -479,7 +479,7 @@ Outputs trivy.sarif.
 
 All reports are stored under /tmp/artifacts as CircleCI artifacts.
 
-Linting (Client)
+**Linting (Client)**
 bankportal.client/package.json adds:
 
 json
@@ -492,16 +492,16 @@ Copy code
 }
 A basic .eslintrc.cjs config exists so you can run:
 
-bash
+
 
 cd bankportal.client
 npm run lint
 This satisfies the “lint tests” part of the pipeline requirement.
 
-Changelog – Improvements from Part 2
+**Changelog – Improvements from Part 2**
 From Part 2 to Part 3, the following improvements were made:
 
-Security Hardening
+**Security Hardening**
 
 Added employee portal with proper separation between customers and staff.
 
@@ -517,13 +517,13 @@ Server-side checks for IsEmployee.
 
 Improved React frontend with strict allow-list RegEx and live field-level validation.
 
-Session & Auth
-
+**Session & Auth
+**
 Clarified and documented the use of HttpOnly + Secure cookies.
 
 AuthController.Me and AuthController.Login now return isEmployee, enabling safe UI branching on the client.
 
-UI/UX Improvements
+**UI/UX Improvements**
 
 Replaced raw, unstyled components with a card-based layout (.app-shell, .app-card).
 
@@ -541,8 +541,8 @@ Added a clear toolbar with:
 
 Improved forms with consistent labels, hints, and inline error messages.
 
-Employee Workflow
-
+**Employee Workflow
+**
 Implemented full verification & submission flow:
 
 Employee sees a table of payments by status.
@@ -553,7 +553,7 @@ Employee sees a table of payments by status.
 
 The states clearly match the description: pending → verified → submitted.
 
-DevSecOps / Pipeline
+**DevSecOps / Pipeline**
 
 Migrated away from restricted images to public dotnet SDK base image.
 
@@ -571,7 +571,7 @@ dotnet list package --vulnerable.
 
 ESLint script for client (npm run lint).
 
-Documentation
+**Documentation**
 
 Produced this comprehensive README explaining:
 
