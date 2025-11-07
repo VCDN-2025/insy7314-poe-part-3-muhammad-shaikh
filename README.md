@@ -130,7 +130,7 @@ The system is designed to show secure coding practices and defence against:
 
 ### 2. Clone the repo
 
-```bash
+bash
 git clone <your-clone-url>
 cd insy7314-poe-part-3-muhammad-shaikh
 3. Build the React client (only if you need to rebuild)
