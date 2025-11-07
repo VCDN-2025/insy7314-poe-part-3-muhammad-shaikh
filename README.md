@@ -583,3 +583,60 @@ DevSecOps tooling
 
 Improvements from Part 2
 
+## References
+
+Microsoft. (2024). *Antiforgery in ASP.NET Core*. Microsoft Learn.  
+https://learn.microsoft.com/aspnet/core/security/anti-request-forgery
+
+Microsoft. (2024). *Enforce HTTPS in ASP.NET Core*. Microsoft Learn.  
+https://learn.microsoft.com/aspnet/core/security/enforcing-ssl
+
+Microsoft. (2024). *Secure ASP.NET Core apps against XSRF/CSRF attacks*. Microsoft Learn.  
+https://learn.microsoft.com/aspnet/core/security/anti-request-forgery
+
+Microsoft. (2024). *ASP.NET Core security and identity*. Microsoft Learn.  
+https://learn.microsoft.com/aspnet/core/security
+
+Microsoft. (2024). *Identity model customization in ASP.NET Core*. Microsoft Learn.  
+https://learn.microsoft.com/aspnet/core/security/authentication/customize-identity-model
+
+Microsoft. (2024). *Rate limiting in ASP.NET Core*. Microsoft Learn.  
+https://learn.microsoft.com/aspnet/core/performance/rate-limit
+
+Microsoft. (2024). *Use HTTPS in ASP.NET Core*. Microsoft Learn.  
+https://learn.microsoft.com/aspnet/core/security/enforcing-ssl
+
+Microsoft. (2024). *EF Core security considerations*. Microsoft Learn.  
+https://learn.microsoft.com/ef/core/miscellaneous/cli/dotnet
+
+OWASP Foundation. (2024). *OWASP Cheat Sheet Series: Cross-Site Request Forgery Prevention*.  
+https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html
+
+OWASP Foundation. (2024). *OWASP Cheat Sheet Series: Content Security Policy*.  
+https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html
+
+OWASP Foundation. (2024). *OWASP Cheat Sheet Series: SQL Injection Prevention*.  
+https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+
+OWASP Foundation. (2024). *OWASP Cheat Sheet Series: Password Storage*.  
+https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
+
+OWASP Foundation. (2024). *OWASP Cheat Sheet Series: Clickjacking Defense*.  
+https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html
+
+OWASP Foundation. (2024). *OWASP Top 10 – 2021*.  
+https://owasp.org/www-project-top-ten/
+
+GitLeaks. (2024). *Gitleaks – Scan git repos for secrets*.  
+https://github.com/gitleaks/gitleaks
+
+Semgrep. (2024). *Semgrep – Lightweight static analysis for many languages*.  
+https://semgrep.dev/
+
+Aqua Security. (2024). *Trivy – Vulnerability and misconfiguration scanner*.  
+https://github.com/aquasecurity/trivy
+
+Node.js Foundation. (2024). *npm audit*.  
+https://docs.npmjs.com/cli/v10/commands/npm-audit
+
+
