@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "Hash": "o2+CrxFtYcBL9srQ8IOgFE/a7GsR2iEzOB/kKm+kjmI=",
+  "Source": "BankPortal.Server",
+  "BasePath": "_content/BankPortal.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\shaik\\source\\repos\\BankPortal\\bankportal.client\\bankportal.client.esproj",
+      "Version": 2,
+      "Source": "bankportal.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BankPortal.Server\\wwwroot",
+      "Source": "BankPortal.Server",
+      "ContentRoot": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\",
+      "BasePath": "_content/BankPortal.Server",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\assets\\index-BcwXGmI1.css",
+      "SourceId": "BankPortal.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\",
+      "BasePath": "_content/BankPortal.Server",
+      "RelativePath": "assets/index-BcwXGmI1.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\index-BcwXGmI1.css"
+    },
+    {
+      "Identity": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\assets\\index-CyD3jFCG.js",
+      "SourceId": "BankPortal.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\",
+      "BasePath": "_content/BankPortal.Server",
+      "RelativePath": "assets/index-CyD3jFCG.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\index-CyD3jFCG.js"
+    },
+    {
+      "Identity": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\index.html",
+      "SourceId": "BankPortal.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\",
+      "BasePath": "_content/BankPortal.Server",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\vite.svg",
+      "SourceId": "BankPortal.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\",
+      "BasePath": "_content/BankPortal.Server",
+      "RelativePath": "vite.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\vite.svg"
+    }
+  ]
+}

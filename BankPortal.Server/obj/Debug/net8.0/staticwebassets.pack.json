@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\assets\\index-BcwXGmI1.css",
+      "PackagePath": "staticwebassets\\assets\\index-BcwXGmI1.css"
+    },
+    {
+      "Id": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\assets\\index-CyD3jFCG.js",
+      "PackagePath": "staticwebassets\\assets\\index-CyD3jFCG.js"
+    },
+    {
+      "Id": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\wwwroot\\vite.svg",
+      "PackagePath": "staticwebassets\\vite.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BankPortal.Server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BankPortal.Server.props",
+      "PackagePath": "build\\BankPortal.Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BankPortal.Server.props",
+      "PackagePath": "buildMultiTargeting\\BankPortal.Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BankPortal.Server.props",
+      "PackagePath": "buildTransitive\\BankPortal.Server.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

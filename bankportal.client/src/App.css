@@ -1,0 +1,265 @@
+﻿/* Make the React root fill the viewport */
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #e5e7eb; /* light gray behind the card */
+}
+
+/* Full-screen shell */
+.app-shell {
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: radial-gradient(circle at top left, #e0f2fe, #e5e7eb 40%, #d1d5db);
+}
+
+/* Main white card */
+.app-card {
+    width: 100%;
+    max-width: 1100px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px 28px 32px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.16), 0 0 0 1px rgba(148, 163, 184, 0.2);
+    box-sizing: border-box;
+}
+
+/* Header area */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.app-title {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.75rem;
+    color: #0f172a; /* slate-900 */
+}
+
+.app-subtitle {
+    margin: 0;
+    color: #6b7280; /* gray-500 */
+    font-size: 0.95rem;
+}
+
+.app-user {
+    font-size: 0.9rem;
+    color: #4b5563; /* gray-600 */
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+}
+
+/* Top buttons bar */
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 999px;
+    border: 1px solid transparent;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.05s ease;
+}
+
+    .btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+.btn-primary {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+    .btn-primary:hover:not(:disabled) {
+        background: #1d4ed8;
+        border-color: #1d4ed8;
+        transform: translateY(-1px);
+    }
+
+.btn-secondary {
+    background: #f3f4f6;
+    color: #111827;
+    border-color: #d1d5db;
+}
+
+    .btn-secondary:hover:not(:disabled) {
+        background: #e5e7eb;
+        border-color: #cbd5f5;
+        transform: translateY(-1px);
+    }
+
+.btn-outline {
+    background: #ffffff;
+    color: #2563eb;
+    border-color: #93c5fd;
+}
+
+    .btn-outline:hover:not(:disabled) {
+        background: #eff6ff;
+        border-color: #2563eb;
+        transform: translateY(-1px);
+    }
+
+/* Global message bar */
+.app-message {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #bfdbfe;
+    background: #eff6ff;
+    color: #1e3a8a;
+    font-size: 0.9rem;
+    margin-bottom: 1.3rem;
+}
+
+    .app-message.error {
+        border-color: #fecaca;
+        background: #fef2f2;
+        color: #b91c1c;
+    }
+
+/* Sections */
+section {
+    margin-top: 0.5rem;
+}
+
+/* Form fields */
+.field {
+    display: block;
+    margin-bottom: 0.9rem;
+}
+
+.field-label {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+    color: #111827;
+}
+
+.field-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.55rem 0.65rem;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+    .field-input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35);
+        background: #f9fafb;
+    }
+
+    .field-input.error {
+        border-color: #dc2626;
+        box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.35);
+        background: #fef2f2;
+    }
+
+.field-hint {
+    color: #6b7280;
+    font-size: 0.75rem;
+    margin-top: 0.15rem;
+}
+
+.field-error {
+    color: #b91c1c;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+/* Payments list (customer) */
+.payments-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .payments-list li {
+        padding: 0.5rem 0.6rem;
+        border-bottom: 1px solid #e5e7eb;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .payments-list li:last-child {
+            border-bottom: none;
+        }
+
+/* Employee table */
+.emp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+    .emp-table th,
+    .emp-table td {
+        padding: 0.4rem 0.55rem;
+        border-bottom: 1px solid #e5e7eb;
+        text-align: left;
+    }
+
+    .emp-table thead th {
+        background: #f9fafb;
+        font-weight: 600;
+        color: #374151;
+        border-bottom: 1px solid #d1d5db;
+    }
+
+    .emp-table tbody tr:nth-child(even) {
+        background: #f9fafb;
+    }
+
+/* Small screens */
+@media (max-width: 768px) {
+    .app-shell {
+        padding: 1rem;
+    }
+
+    .app-card {
+        padding: 16px 16px 24px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
