@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server.Tests\\BankPortal.Server.Tests.csproj": {}
+    "C:\\Users\\shaik\\source\\repos\\insy7314-poe-part-3-muhammad-shaikh\\BankPortal.Server.Tests\\BankPortal.Server.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server.Tests\\BankPortal.Server.Tests.csproj": {
+    "C:\\Users\\shaik\\source\\repos\\insy7314-poe-part-3-muhammad-shaikh\\BankPortal.Server.Tests\\BankPortal.Server.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server.Tests\\BankPortal.Server.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\shaik\\source\\repos\\insy7314-poe-part-3-muhammad-shaikh\\BankPortal.Server.Tests\\BankPortal.Server.Tests.csproj",
         "projectName": "BankPortal.Server.Tests",
-        "projectPath": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server.Tests\\BankPortal.Server.Tests.csproj",
+        "projectPath": "C:\\Users\\shaik\\source\\repos\\insy7314-poe-part-3-muhammad-shaikh\\BankPortal.Server.Tests\\BankPortal.Server.Tests.csproj",
         "packagesPath": "C:\\Users\\shaik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server.Tests\\obj\\",
+        "outputPath": "C:\\Users\\shaik\\source\\repos\\insy7314-poe-part-3-muhammad-shaikh\\BankPortal.Server.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shaik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\BankPortal.Server.csproj": {
-                "projectPath": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\BankPortal.Server.csproj"
+              "C:\\Users\\shaik\\source\\repos\\insy7314-poe-part-3-muhammad-shaikh\\BankPortal.Server\\BankPortal.Server.csproj": {
+                "projectPath": "C:\\Users\\shaik\\source\\repos\\insy7314-poe-part-3-muhammad-shaikh\\BankPortal.Server\\BankPortal.Server.csproj"
               }
             }
           }
@@ -86,14 +86,14 @@
         }
       }
     },
-    "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\BankPortal.Server.csproj": {
+    "C:\\Users\\shaik\\source\\repos\\insy7314-poe-part-3-muhammad-shaikh\\BankPortal.Server\\BankPortal.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\BankPortal.Server.csproj",
+        "projectUniqueName": "C:\\Users\\shaik\\source\\repos\\insy7314-poe-part-3-muhammad-shaikh\\BankPortal.Server\\BankPortal.Server.csproj",
         "projectName": "BankPortal.Server",
-        "projectPath": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\BankPortal.Server.csproj",
+        "projectPath": "C:\\Users\\shaik\\source\\repos\\insy7314-poe-part-3-muhammad-shaikh\\BankPortal.Server\\BankPortal.Server.csproj",
         "packagesPath": "C:\\Users\\shaik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\obj\\",
+        "outputPath": "C:\\Users\\shaik\\source\\repos\\insy7314-poe-part-3-muhammad-shaikh\\BankPortal.Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shaik\\AppData\\Roaming\\NuGet\\NuGet.Config",

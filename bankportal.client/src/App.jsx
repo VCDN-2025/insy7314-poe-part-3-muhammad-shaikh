@@ -119,13 +119,21 @@ export default function App() {
     const swift_bic = useField("");
     const [payments, setPayments] = useState([]);
 
-    // employee state
+    // employee payments view state
     const [empPayments, setEmpPayments] = useState([]);
     const [empStatusFilter, setEmpStatusFilter] = useState("PendingVerification");
+
+    // employee creation form fields
+    const empFullName = useField("");
+    const empIdNumber = useField("");
+    const empAccountNumber = useField("");
+    const empUsername = useField("");
+    const empPassword = useField("");
 
     // per-form error maps
     const [regErrs, setRegErrs] = useState({});
     const [logErrs, setLogErrs] = useState({});
+    const [empRegErrs, setEmpRegErrs] = useState({});
 
     // on load: get CSRF and see if already logged in 
     useEffect(() => {
@@ -393,6 +401,57 @@ export default function App() {
         }
     }
 
+    // ===== Create Employee (admin/staff) =====
+    async function doCreateEmployee() {
+        setMsg("");
+        const payload = {
+            fullName: empFullName.value.trim(),
+            idNumber: empIdNumber.value.trim(),
+            accountNumber: empAccountNumber.value.trim(),
+            username: empUsername.value.trim(),
+            password: empPassword.value
+        };
+
+        const e = validateRegister(payload);
+        setEmpRegErrs(e);
+        if (Object.keys(e).length) {
+            setMsg("Please fix the highlighted fields in the employee form.");
+            return;
+        }
+
+        try {
+            await post("/api/admin/employees", payload);
+            setMsg("Employee created successfully.");
+
+            // clear form + errors
+            setEmpRegErrs({});
+            empFullName.set("");
+            empIdNumber.set("");
+            empAccountNumber.set("");
+            empUsername.set("");
+            empPassword.set("");
+        } catch (err) {
+            const d = err && err.data;
+            if (d && d.details) {
+                const mapped = {
+                    fullName: d.details.FullName && d.details.FullName[0],
+                    idNumber: d.details.IdNumber && d.details.IdNumber[0],
+                    accountNumber: d.details.AccountNumber && d.details.AccountNumber[0],
+                    username: d.details.Username && d.details.Username[0],
+                    password: d.details.Password && d.details.Password[0]
+                };
+                setEmpRegErrs(prev => ({ ...prev, ...mapped }));
+                setMsg("Please fix the highlighted fields in the employee form.");
+                return;
+            }
+            if (d && d.error) {
+                setMsg(d.error);
+                return;
+            }
+            setMsg(err.text || err.message || "Failed to create employee");
+        }
+    }
+
     return (
         <div className="app-shell">
             <div className="app-card">
@@ -596,6 +655,80 @@ export default function App() {
                 {view === "emp" && isEmployee && (
                     <section>
                         <h2>Employee International Payments Portal</h2>
+
+                        {/* Add Employee form */}
+                        <div className="card" style={{ marginBottom: 16, padding: 12 }}>
+                            <h3 style={{ marginTop: 0 }}>Add Employee</h3>
+                            <Field
+                                label="Full name"
+                                value={empFullName.value}
+                                onChange={e => {
+                                    empFullName.onChange(e);
+                                    setEmpRegErrs(prev => ({
+                                        ...prev,
+                                        fullName: rules.fullName(e.target.value)
+                                    }));
+                                }}
+                                hint="2-60 letters; may include spaces and , . ' -"
+                                error={empRegErrs.fullName}
+                            />
+                            <Field
+                                label="ID number"
+                                value={empIdNumber.value}
+                                onChange={e => {
+                                    empIdNumber.onChange(e);
+                                    setEmpRegErrs(prev => ({
+                                        ...prev,
+                                        idNumber: rules.idNumber(e.target.value)
+                                    }));
+                                }}
+                                hint="6-20 characters; letters/digits/hyphen only"
+                                error={empRegErrs.idNumber}
+                            />
+                            <Field
+                                label="Account number"
+                                value={empAccountNumber.value}
+                                onChange={e => {
+                                    empAccountNumber.onChange(e);
+                                    setEmpRegErrs(prev => ({
+                                        ...prev,
+                                        accountNumber: rules.accountNumber(e.target.value)
+                                    }));
+                                }}
+                                hint="Digits only, 8-20 long"
+                                error={empRegErrs.accountNumber}
+                            />
+                            <Field
+                                label="Username"
+                                value={empUsername.value}
+                                onChange={e => {
+                                    empUsername.onChange(e);
+                                    setEmpRegErrs(prev => ({
+                                        ...prev,
+                                        username: rules.username(e.target.value)
+                                    }));
+                                }}
+                                hint="3-30; letters/digits/_ . -"
+                                error={empRegErrs.username}
+                            />
+                            <Field
+                                label="Password"
+                                type="password"
+                                value={empPassword.value}
+                                onChange={e => {
+                                    empPassword.onChange(e);
+                                    setEmpRegErrs(prev => ({
+                                        ...prev,
+                                        password: rules.password(e.target.value)
+                                    }));
+                                }}
+                                hint={`${PASS_MIN}-${PASS_MAX} characters`}
+                                error={empRegErrs.password}
+                            />
+                            <button className="btn btn-primary" onClick={doCreateEmployee}>
+                                Create employee
+                            </button>
+                        </div>
 
                         <div style={{ marginBottom: 10 }}>
                             <label>Status filter: </label>

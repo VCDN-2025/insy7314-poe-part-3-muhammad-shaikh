@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:5173",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\Users\\shaik\\source\\repos\\BankPortal\\BankPortal.Server\\..\\bankportal.client",
+"WorkingDirectory": "C:\\Users\\shaik\\source\\repos\\insy7314-poe-part-3-muhammad-shaikh\\BankPortal.Server\\..\\bankportal.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }
